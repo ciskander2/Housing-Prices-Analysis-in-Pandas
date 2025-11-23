@@ -46,13 +46,13 @@ df.describe() for summary statistics
 
 df.isna().sum() to reveal missing values
 
-3.  Clean the Dataset
+2.  Clean the Dataset
    
 Removed missing values with df.dropna()
 
 Ensured all relevant columns were numeric
 
-4. Feature Engineering
+3. Feature Engineering
    
 Created a new column:
 
@@ -70,7 +70,7 @@ Furnished 3BR homes above $1M
 
 This uses pandas boolean masks with &, |, and parentheses.
 
-5. Summary Statistics
+4. Summary Statistics
    
 Generated insights such as:
 
@@ -80,13 +80,13 @@ Median home price
 
 Distribution of price per square foot
 
-7. Visualization
+5. Visualization
    
 Produced a histogram of Price per Square Foot:
 
 df["Price per Square Foot"].hist(bins=6)
 
-9. Saved Cleaned Dataset
+6. Saved Cleaned Dataset
     
 Exported a cleaned version for reuse:
 
@@ -119,6 +119,9 @@ nj-housing-analysis/
 
 │
 ├── Housing.csv                 # raw dataset
+
 ├── cleaned_Housing.csv         # cleaned version
+
 ├── nj_housing_crisis_and_analysis.py
+
 └── README.md
