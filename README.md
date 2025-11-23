@@ -1,6 +1,7 @@
 🏠 Housing Analysis — Data Cleaning & Exploratory Insights
 
 This project performs exploratory data analysis (EDA) on a housing dataset using Python, pandas, and matplotlib.
+
 It walks through the full lifecycle of basic data analytics: loading data, cleaning it, engineering features, filtering based on conditions, generating summary statistics, grouping categories, and visualizing results.
 
 The goal is to understand pricing patterns in a dataset of high-end residential properties.
@@ -51,6 +52,7 @@ Created a new derived feature:
 Price per Square Foot = price / area
 
 This metric gives a better sense of value across homes of different sizes.
+
 4. Filtering with Boolean Logic
 
 Used pandas boolean masks to generate subsets:
@@ -99,8 +101,6 @@ Generated a histogram to show the distribution of Price per Square Foot:
 
 df["Price per Square Foot"].hist(bins=50)
 
-
-
 This helps visualize how housing value varies across the dataset.
 
 (Optional bar charts can be added for groupby results.)
@@ -121,20 +121,21 @@ Price per square foot varies widely, revealing differences in property quality a
 
 Install dependencies:
 
-
 pip install pandas matplotlib
 
-
 Run the script:
-python housing_analysis_file.py
 
+python housing_analysis_file.py
 
 📁 Project Structure
 
-
 nj-housing-analysis/
+
 │
 ├── Housing.csv                 # Raw dataset
+
 ├── cleaned_Housing.csv         # Cleaned dataset
+
 ├── housing_analysis_file.py    # Main analysis script
+
 └── README.md                   # Documentation
