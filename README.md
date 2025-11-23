@@ -93,6 +93,8 @@ Median price by furnishing status
 
 Average price in preferred vs. non-preferred areas
 
+Average price in main road vs non main road areas
+
 Groupbys provide insight into the relationship between home characteristics and price.
 
 7. Visualization
