@@ -6,7 +6,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 import numpy as np
 import matplotlib.ticker as ticker
 
-# 1. Read the csv
+# 1. Read the csv in pandas:
 df = pd.read_csv('Housing.csv')
 
 # 2. Basic Information:
@@ -28,22 +28,22 @@ homes_above_3000_sqft = df["area"] > 3000
 df["Price per Square Foot"] = df["price"] / df["area"]
 price_per_square_foot = df["Price per Square Foot"]
 
-# 5. Statistics for the homes
+# 5. Statistics for the Homes
 standard_deviation_between_homes = df["price"].std()
 median_home = df["price"].median()
 average_home = df["price"].mean()
 
-#6. Group by for statistics
+# 6. Group by for Statistics
 average_price_per_bedroom = df.groupby("bedrooms")["price"].mean()
 median_price_per_bedroom = df.groupby("bedrooms")["price"].median()
 median_price_per_furnishing_status = df.groupby("furnishingstatus")["price"].median()
 main_road_average = df.groupby("mainroad")["price"].mean()
 average_price_per_square_foot_by_preferred_area = df.groupby("prefarea")["price"].mean()
 
-# 7. Printing our answers and revealing insights from the data:
-print(f"\nNumber of ten million dollar 3BR homes: {three_BR_homes_and_above_10M.sum()}")
-print(f"\nNumber of Three Bedroom Homes, Furnished, and above 10M Dollars: {three_BR_homes_and_furnished_and_above_10M.sum()}")
-print(f"\nNumber of homes above 3000 Square Feet: {homes_above_3000_sqft.sum()}")
+# 7. Printing our Answers and Revealing Insights from the Data:
+print(f"\nNumber of ten million dollar 3BR homes: {three_BR_homes_and_above_10M.shape[0]}")
+print(f"\nNumber of Three Bedroom Homes, Furnished, and above 10M Dollars: {three_BR_homes_and_furnished_and_above_10M.shape[0]}")
+print(f"\nNumber of homes above 3000 Square Feet: {homes_above_3000_sqft.shape[0]}")
 print("\nPrice per square foot (first 10 homes):")
 print(price_per_square_foot.head(10).round(2).to_string(index=False))
 print(f"Median Home Price: ${median_home:,.2f}")
@@ -60,14 +60,14 @@ print(average_price_per_square_foot_by_preferred_area.round(2).to_string())
 print("\nHomes on main roads vs non main roads:")
 print(main_road_average.round(2).to_string())
 
-# 8. New header:
+# 8. New Header:
 print("\nTen Million Dollar Plus Home and 3 Bedrooms:")
 print(three_BR_homes_and_above_10M.head())
 
-# 9. Saving the file:
+# 9. Saving the File:
 df.to_csv('cleaned_Housing.csv', index=False)
 
-# 10. Plotting the results
+# 10. Plotting the Results
 plt.figure()
 df["Price per Square Foot"].hist(bins=50)
 plt.title("Distribution of Price per Square Foot for Building: ")
@@ -109,7 +109,7 @@ next_10_homes_prediction = model.predict(next_10_homes)
 print("\nPredicting Prices for the next 10 Homes:")
 for i, price in enumerate(next_10_homes_prediction, start=1):
     print(f"Home {i}: ${price:,.2f}")
-  
+
 # 12. Additional Plot for the Predicted vs Actual Price
 plt.figure(figsize=(6,10))
 plt.scatter(y_test, y_pred, alpha=0.5)
@@ -121,6 +121,8 @@ plt.gca().xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"${x:,.0f
 plt.gca().yaxis.set_major_formatter(ticker.FuncFormatter(lambda y, _: f"${y:,.0f}"))
 plt.tight_layout()
 plt.show()
+
+
 
 
 
