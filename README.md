@@ -11,9 +11,13 @@ Using pandas, NumPy, and matplotlib, it walks through a full end-to-end explorat
 📂 Project Structure
 
 ├── data/
+
 │   ├── raw_data.csv
+
 │   ├── cleaned_data.csv
+
 ├── Housing_Prices_Analysis.ipynb
+
 └── README.md
 
 🧼 1. Data Cleaning
@@ -61,6 +65,7 @@ Group-by aggregations
 Price per square foot comparisons
 
 💡 3. Key Insights
+
 📈 Insight 1: Size is the strongest driver of price
 
 Price shows clear positive correlation with square footage, especially above the luxury threshold.
@@ -73,7 +78,7 @@ Homes in certain neighborhoods consistently show 20–40% higher price per squar
 
 After 4–5 bedrooms, marginal price increase flattens.
 
-💰 Insight 4: Price per square foot varies heavily
+💰 Insight 4: Price per square foot (PPSF) varies heavily
 
 Some high-priced homes have lower PPSF, suggesting:
 
@@ -170,5 +175,7 @@ Run all cells to reproduce the full analysis.
 🧑‍💻 Author
 
 Christopher Iskander
+
 NYU Engineering Student | Incoming Data Engineering Intern @ Moody's Corporation | Previously @ Thornton Tomasetti (Applied Science -- Software & Data Science)
+
 Focused on data analytics, fintech, and real-world decision modeling.
