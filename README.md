@@ -1,6 +1,8 @@
 🏡 Housing Prices Analysis in Pandas
 
-A complete exploratory data analysis (EDA) of luxury housing prices using Python and pandas.
+This project performs a full exploratory data analysis (EDA) on a dataset of luxury residential properties.
+
+The goal is to identify the strongest drivers of home prices, uncover hidden patterns, and build a foundation for future machine-learning models.
 
 📌 Overview
 
@@ -16,7 +18,7 @@ Using pandas, NumPy, and matplotlib, it walks through a full end-to-end explorat
 ├── Housing_Prices_Analysis.ipynb
 └── README.md
 
-🧼 1. Data Cleaning
+1. Data Cleaning 🧼
 
 Steps included:
 
@@ -34,7 +36,7 @@ Creating new features such as price per square foot
 
 ✔️ The cleaned CSV is exported for reproducibility.
 
-📊 2. Exploratory Data Analysis (EDA):
+2. Exploratory Data Analysis (EDA): 📊 
 
 Key Questions Explored:
 
